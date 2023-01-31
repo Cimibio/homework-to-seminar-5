@@ -26,7 +26,6 @@ int b2 = int.Parse(Console.ReadLine());
 Console.Write("Введите k2: ");
 int k2 = int.Parse(Console.ReadLine());
 
-//Calc(b1,k1,b2,k2);
 if (k2 == k1 && b2 != b1)   //прямые парралельны
 {
     Console.WriteLine("Линии параллельны!");
