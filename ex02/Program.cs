@@ -20,10 +20,26 @@ void FillMatrix(int[,] arg)
     }
 }
 
+void ResizeMatrix(int[,] arg, int x)
+{
+    for (int i = 0; i < arg.GetLength(0); i++)
+    {
+        arg[i,0] = arg[i,0] * x;
+        arg[i,1] = arg[i,1] * x;
+    }
+}
+
+
 Console.Write("введите количество вершин: ");
 int n = int.Parse(Console.ReadLine());
-
 int[,] Matrix = new int[n, 2];
 
 FillMatrix(Matrix);
+PrintMatrix(Matrix);
+
+Console.Write("Введите мастштаб: ");
+int x = int.Parse(Console.ReadLine());
+
+ResizeMatrix(Matrix, x);
+Console.WriteLine("После масштабирования, вершины фигуры имеют следующие координаты: ");
 PrintMatrix(Matrix);
